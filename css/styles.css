@@ -1,0 +1,115 @@
+#title{
+  background-color: #f9ed69;
+  font-family: 'Merriweather Sans', sans-serif;
+
+
+}
+h1,h2,h3{
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+h2{
+      font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding-bottom: 30px;
+}
+.container-fluid{
+  padding: 3% 15%;
+}
+
+.yout{
+  padding-left: 60px;
+
+}
+/* NAVIGATION BAR */
+.navbar{
+  padding:0 0 4.5rem 0;
+}
+
+.navbar-brand{
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 2.5rem;
+   font-weight: bold;
+}
+.nav-item{
+  padding : 0 18px;
+}
+.nav-link{
+  font-size: 1.2rem;
+font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+}
+.h-button{
+
+  margin: 5% 3% 5% 0;
+}
+p{
+  color: #8f8f8f;
+}
+ul{
+  list-style: square;
+}
+li{
+  padding-bottom: 10px;
+}
+/* HISTORY */
+
+#history{
+    background-color: #cedebd;
+    padding: 5% 8%;
+    text-align: center;
+}
+.himg{
+  padding-left: 25%;
+}
+.captio{
+  padding:10%;
+}
+/* Mathematics */
+#Maths{
+  background-color: #cffffe;
+  padding: 7% 12%;
+  text-align: center;
+}
+
+.mimg{
+
+padding : 20px 0;
+
+}
+
+
+
+/* SLIDES */
+
+.slide2{
+
+  text-align: center;
+  background-color: #c060a1;
+
+}
+
+.slide2-heading{
+  padding-top: 5%;
+  padding-bottom: 0;
+}
+
+.carousel-item{
+    padding: 5% 20%;
+
+}
+
+.slide2-text{
+  color:#ffff;
+  font-weight: lighter;
+  }
+
+@media (max-width:1000px) {
+
+.mimg{
+
+padding : 20px 0;
+ height: 200px;
+ width: 200px;
+}
+}
