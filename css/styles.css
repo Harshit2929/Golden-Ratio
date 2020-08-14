@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  font-family:'Roboto', sans-serif;
+}
+
 #title{
   background-color: #f9ed69;
-  font-family: 'Merriweather Sans', sans-serif;
-
-
 }
-h1,h2,h3{
-  font-family: 'Montserrat-Bold', sans-serif;
-}
+
 h2{
       font-size: 2rem;
   font-weight: bold;
@@ -27,7 +28,6 @@ h2{
 }
 
 .navbar-brand{
-   font-family: 'Ubuntu', sans-serif;
    font-size: 2.5rem;
    font-weight: bold;
 }
@@ -36,7 +36,7 @@ h2{
 }
 .nav-link{
   font-size: 1.2rem;
-font-family: 'Merriweather Sans', sans-serif;
+<!--font-family: 'Merriweather Sans', sans-serif;-->
   font-weight: bold;
 }
 .h-button{
