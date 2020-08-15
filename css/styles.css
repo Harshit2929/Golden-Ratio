@@ -1,12 +1,9 @@
-#title{
-  background-color: #f9ed69;
-  font-family: 'Merriweather Sans', sans-serif;
-
-
+body{
+  background-color:#010101;
+  font-family: 'Roboto', sans-serif;
+  color: #ffff;
 }
-h1,h2,h3{
-  font-family: 'Montserrat-Bold', sans-serif;
-}
+
 h2{
       font-size: 2rem;
   font-weight: bold;
@@ -15,37 +12,41 @@ h2{
 }
 .container-fluid{
   padding: 3% 15%;
+  padding-top: 150px;
 }
-
+hr{
+  margin: 50px auto;
+  border-style:dotted none none none;
+  border-color:#EAF6F6;
+  border-width:8px;
+  width: 5%;
+}
 .yout{
   padding-left: 60px;
 
 }
 /* NAVIGATION BAR */
 .navbar{
-  padding:0 0 4.5rem 0;
+  color:#010101;
+  padding:0 30px 0.1rem 30px;
 }
 
 .navbar-brand{
-   font-family: 'Ubuntu', sans-serif;
-   font-size: 2.5rem;
-   font-weight: bold;
-}
+     font-size: 2rem;
+     font-weight: bold;
+   }
 .nav-item{
   padding : 0 18px;
+
 }
 .nav-link{
   font-size: 1.2rem;
-font-family: 'Merriweather Sans', sans-serif;
-  font-weight: bold;
 }
 .h-button{
 
   margin: 5% 3% 5% 0;
 }
-p{
-  color: #8f8f8f;
-}
+
 ul{
   list-style: square;
 }
@@ -55,7 +56,6 @@ li{
 /* HISTORY */
 
 #history{
-    background-color: #cedebd;
     padding: 5% 8%;
     text-align: center;
 }
@@ -67,7 +67,6 @@ li{
 }
 /* Mathematics */
 #Maths{
-  background-color: #cffffe;
   padding: 7% 12%;
   text-align: center;
 }
@@ -83,10 +82,7 @@ padding : 20px 0;
 /* SLIDES */
 
 .slide2{
-
   text-align: center;
-  background-color: #c060a1;
-
 }
 
 .slide2-heading{
