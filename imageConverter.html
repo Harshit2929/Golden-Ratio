@@ -1,13 +1,26 @@
-<div style="border:0px solid black;width:100%;height:80%;z-index: 1;">
-    
-        <input type="file" onchange="selectImages(event)" />
+<div style="border:0px solid black;width:100%;height:80%;">
+        <h1 style="background: white;width: 60%;">
+            Hover Images to make Colourfull and Click to Show It on Main Screen
+        </h1>
         
-    <div id='ourElement'></div>
+            <div style="border:1px solid black;width:60%;padding:10px">
+                <h2>You can Upload Your Image</h2>
+
+                
+                <input accept="image/jpeg,image/png,image/jpg" type="file" onchange="selectImages(event)" />
+            </div>
+        
+    <div id='ourElement' style="padding: 20px; ">
+        <canvas id='viewport'></canvas>
+        <img id='ourImageMain' style="display: none" alt='Please Select the Image or upload some image' />
+    </div>
 
 
 
-    <div id='sampleContainer' style="z-index:2;display: block;position: absolute;right:0px;padding:10px;width: 300px;height:100%;overflow: scroll;"></div>
+    <div id='sampleContainer' style="border:1px solid #dedede;top:0;z-index:0;display: block;position: absolute;right:0px;padding:10px;width: 300px;height:100%;overflow: scroll;"></div>
     <script>
+        var canvas = document.getElementById('viewport');
+        var context = canvas.getContext('2d');
         let sampleContainer = document.getElementById('sampleContainer');
         let ourElement = document.getElementById("ourElement");
 
@@ -20,17 +33,26 @@
         ]
         function nowGot(url){
 
-            let ourImage = document.createElement('img')
+            let ourImage = document.getElementById('ourImageMain')
                 
                 ourImage.src = url;
-
-                ourImage.style.width = '97.08%';
-                ourImage.style.height = '60%'
-                ourElement.appendChild(ourImage)
+                let length = 400;
+                ourImage.style.width = length*1.618 + 'px';
+                ourImage.style.height = length + 'px';
+                ourImage.onload = (d)=>{
+                    console.log(d)
+                    canvas.width = length*1.618;
+                canvas.height = length;
+                context.drawImage(ourImage, -1*length, -1.618*length);
+ 
+                }
+                
             }
 
-            let t = document.createElement('h1')
-                t.innerHTML = 'Hover Images to make Colourfull and Click to Show It on Main Screen'
+            nowGot('https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E')
+
+            let t = document.createElement('h6')
+                t.innerHTML = 'Selection Window'
                 sampleContainer.appendChild(t)
                 t = document.createElement('br')
                 sampleContainer.appendChild(t)
@@ -44,7 +66,7 @@
                     eachImg.style.borderRadius = '2px'
                     eachImg.setAttribute('class','eachSample')
                     eachImg.addEventListener('click',()=>{
-                        alert("Clicke")
+                        // alert("Clicke")
                         nowGot(sampleImages[index])
                     })
                     sampleContainer.appendChild(eachImg)
@@ -54,13 +76,12 @@
         function setImages(){
             if(images.length > 0){
 
-                let ourImage = document.createElement('img')
+                let ourImage = document.getElementById('ourImageMain')
                 
                 ourImage.src = URL.createObjectURL(images[0]);
 
                 ourImage.style.width = '200px';
                 ourImage.style.height = '200px'
-                ourElement.appendChild(ourImage)
 
                 
             }else{
