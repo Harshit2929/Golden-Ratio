@@ -1,20 +1,4 @@
-/* .container-fluid{
 
-  color: black;
-
-}
-a{
-  color:dark;
-}
-.navbar-brand{
-font-weight: bold;
-padding-bottom: 40px;
-}
-.sidebar{
-  height: 100%;
-  width:38.2%;
-
-} */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body{
     font-family: 'Poppins', sans-serif;
@@ -26,6 +10,62 @@ body{
      line-height: 1.7em;
      color:#999;
  }
+
+ h2{
+       font-size: 2rem;
+   font-weight: bold;
+   line-height: 1.5rem;
+   padding: 20px;
+ }
+ .imageGallery{
+      width:500px;
+      height:309px;
+position:relative;
+
+ }
+ .i1{
+   width:309px;
+   height:309px;
+   position: absolute;
+   left: 0;
+   top: 0;
+ }
+ .i2{
+   width:191px;
+   height: 191px;
+   position: absolute;
+   right:0;
+   top:0;
+ }
+ .i3{
+height: 118px;
+width: 118px;
+position:absolute;
+right:0;
+bottom: 0;
+
+ }
+
+ .i4{
+   height: 72.5px;
+   width: 72.5px;
+     position:absolute;
+     bottom: 0;
+     right:118px;
+
+
+ }
+.i5{
+  height: 45px;
+  width: 45px;
+  position: absolute;
+bottom: 72.5px;
+right: 145.5px;
+
+}
+.nature{
+
+}
 a,
 a:hover,
 a:focus{
@@ -38,17 +78,14 @@ a:focus{
     height:1px;
     border-bottom: 1px dashed #ddd;
 }
-.wrapper{
-    display: flex;
-    width:76%;
-    align-items:stretch;
-}
+
+/* SIDEBAR */
 #sidebar{
   width:38%;
-
     background: #005086;
     color:#fff;
-    transition: all 0.3s;
+    display: block;
+
 }
 #sidebar.active{
     margin-left:-250px;
@@ -96,31 +133,47 @@ ul ul a{
     padding-left: 30px !important;
     background: #318fb5;
 }
-ul.CTAs{
-    padding:20px;
-}
-ul.CTAs a{
-    text-align: center;
-    font-size:0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom:5px;
-}
-a.download,
-a.download:hover{
-    background:#318fb5;
-    color:#fff;
-}
+
+/* CONTENT */
 #content{
-    width:100%;
+    text-align: center;
     padding:20px;
-    min-height: 100vh;
-    transition: all 0.3s;
+
 }
-.content-wrapper{
-    padding:15px;
+/* NATURE */
+#nature{
+text-align: center;
+padding:20px;
+}
+/* ARCHITECTURE */
+.card{
+padding: 10px;
+
+
+}
+/* ART */
+.Image{
+width:250px;
+height:154.5px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.ImageV{
+  height:250px;
+  width:154.5px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
 }
 
+.monaLisa{
+  height: 220px;
+  width:154.5px;
+}
 @media(maz-width:768px){
     #sidebar{margin-left:-250px;}
     #sidebar.active{
