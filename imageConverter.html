@@ -1,0 +1,113 @@
+<div style="border:0px solid black;width:100%;height:80%;">
+        <h1 style="background: white;width: 60%;">
+            Hover Images to make Colourfull and Click to Show It on Main Screen
+        </h1>
+        
+            <div style="border:1px solid black;width:60%;padding:10px">
+                <h2>You can Upload Your Image</h2>
+
+                
+                <input accept="image/jpeg,image/png,image/jpg" type="file" onchange="selectImages(event)" />
+            </div>
+        
+    <div id='ourElement' style="padding: 20px; ">
+        <canvas id='viewport'></canvas>
+        <img id='ourImageMain' style="display: none" alt='Please Select the Image or upload some image' />
+    </div>
+
+
+
+    <div id='sampleContainer' style="border:1px solid #dedede;top:0;z-index:0;display: block;position: absolute;right:0px;padding:10px;width: 300px;height:100%;overflow: scroll;"></div>
+    <script>
+        var canvas = document.getElementById('viewport');
+        var context = canvas.getContext('2d');
+        let sampleContainer = document.getElementById('sampleContainer');
+        let ourElement = document.getElementById("ourElement");
+
+        var images = [];
+        let sampleImages = [
+            'https://instagram.famd1-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/118355872_1871198183020789_7293723505863829746_n.jpg?_nc_ht=instagram.famd1-2.fna.fbcdn.net&_nc_cat=1&_nc_ohc=bx_LhLX1J4kAX9lGj7W&oh=16830c9a882d2b9bc4bae2fcc76005fa&oe=5F6D4277',
+            'https://instagram.famd1-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/118076045_759609814856597_6613523153061645449_n.jpg?_nc_ht=instagram.famd1-2.fna.fbcdn.net&_nc_cat=105&_nc_ohc=bEVS0K17hG0AX8Mfkdo&oh=f54321c79176f9729e6f5dcca235eb3c&oe=5F6F8A69',
+            'https://instagram.famd1-2.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/116506521_2169249753207240_5217502698201840486_n.jpg?_nc_ht=instagram.famd1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=2QindKXpepAAX9OESD0&oh=7ab3be805bbc65acea4dd918d0b97897&oe=5F707FC6',
+            'https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E'
+        ]
+        function nowGot(url){
+
+            let ourImage = document.getElementById('ourImageMain')
+                
+                ourImage.src = url;
+                let length = 400;
+                ourImage.style.width = length*1.618 + 'px';
+                ourImage.style.height = length + 'px';
+                ourImage.onload = (d)=>{
+                    console.log(d)
+                    canvas.width = length*1.618;
+                canvas.height = length;
+                context.drawImage(ourImage, -1*length, -1.618*length);
+ 
+                }
+                
+            }
+
+            nowGot('https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E')
+
+            let t = document.createElement('h6')
+                t.innerHTML = 'Selection Window'
+                sampleContainer.appendChild(t)
+                t = document.createElement('br')
+                sampleContainer.appendChild(t)
+
+        sampleImages.forEach((image,index)=>{
+            console.log(index)
+                    let eachImg = document.createElement('img')
+                    eachImg.src = image;
+                    eachImg.width = 200;
+                    eachImg.height = 200
+                    eachImg.style.borderRadius = '2px'
+                    eachImg.setAttribute('class','eachSample')
+                    eachImg.addEventListener('click',()=>{
+                        // alert("Clicke")
+                        nowGot(sampleImages[index])
+                    })
+                    sampleContainer.appendChild(eachImg)
+                })
+
+        
+        function setImages(){
+            if(images.length > 0){
+
+                let ourImage = document.getElementById('ourImageMain')
+                
+                ourImage.src = URL.createObjectURL(images[0]);
+
+                ourImage.style.width = '200px';
+                ourImage.style.height = '200px'
+
+                
+            }else{
+                alert("Some Error, Some IMage must be Selected !!")
+            }
+        }
+
+        var selectImages = (event)=>{
+            // event.preventDefault();
+            console.log(event.target.files);
+            images = event.target.files;
+
+            setImages()
+
+        }
+    </script>
+    <style>
+        .eachSample{
+            margin:5px;
+            transition-duration: 0.1s;
+            cursor: pointer;
+            filter: grayscale();
+        }
+        .eachSample:hover{
+            box-shadow: 0 0 5px;
+            filter:brightness(130%)
+        }
+    </style>
+</div>
