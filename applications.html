@@ -136,7 +136,7 @@
 
             <div class="row">
               <div class="col-md-4">
-                <img src="images/Monalisa.webp" class="card-img-top ImageV" alt="...">
+                <img src="images/Monalisa.webp" id='monalisa_function' class="card-img-top ImageV" alt="...">
               </div>
               <div class="col-md-4">
                 <img src="images/daVinci.jpg" class="Image card-img-top" alt="...">
@@ -228,7 +228,21 @@
       $("#sidebarCollapse").on('click', function() {
         $("#sidebar").toggleClass('active');
       })
+
+      let monalisa_function = document.getElementById("monalisa_function");
+      monalisa_function.addEventListener('mouseenter',()=>{
+        // alert("S")
+        monalisa_function.src = 'images/monalisa.png';
+      })
+      monalisa_function.addEventListener('mouseleave',()=>{
+        // alert("S")
+        monalisa_function.src = 'images/Monalisa.webp';
+      })
+
+
     })
+
+
   </script>
   <!-- EXTERNAL JS -->
   <script src="index.js" charset="utf-8"></script>

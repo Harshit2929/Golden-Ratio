@@ -1,1 +1,52 @@
-edgtrsetg
+<html>
+    <head>
+        <title>
+            Typography | Golden Ratio
+        </title>
+    </head>
+    <body>
+        <div id='controls' style="border:1px solid #dedede">
+            <div style="padding:10px">
+                <label>Title</label>
+                <div>
+                    <input id='title_controller' type="text" placeholder="Enter Title of the Page" onchange="changeTitle(event)" />
+                </div>
+            </div>
+        </div>
+        <div id='controlled_content'>
+            <h1 id='title_element' style="font-weight: 400;text-transform: capitalize;">Section Title</h1>
+            <div style="display: flex;">
+                <div class="content-1">
+                    <h2 style="font-weight: 400;">Paragraph</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h2 style="font-weight: 400;">Paragraph</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+
+        /* Declarations */
+
+        let titleController = document.getElementById("title_controller"),
+            titleElement = document.getElementById("title_element");
+        
+    // Functions on Events 
+    function changeTitle(somevalue){
+        let temp = (somevalue.target.value)
+        titleElement.innerText = temp;
+    }
+        
+
+    
+
+
+    </script>
+</html>
