@@ -5,11 +5,15 @@
         </title>
     </head>
     <body>
+        <div style="width: 100vw;text-align: center;font-size: 64px;font-weight: 400;margin:20px;">Typography | Golden Ratio</div>
         <div id='controls' style="border:1px solid #dedede">
             <div style="padding:10px">
                 <label>Title</label>
                 <div>
-                    <input id='title_controller' type="text" placeholder="Enter Title of the Page" onchange="changeTitle(event)" />
+                    <lable>Font Size</lable>
+                    <select id='title_controller' type="text" placeholder="Enter Title of the Page" onchange="changeTitle(event)">
+                        
+                    </select>
                 </div>
             </div>
         </div>
@@ -17,14 +21,14 @@
             <h1 id='title_element' style="font-weight: 400;text-transform: capitalize;">Section Title</h1>
             <div style="display: flex;">
                 <div class="content-1">
-                    <h2 style="font-weight: 400;">Paragraph</h2>
-                    <p>
+                    <h2 style="font-weight: 400;" class='para_title'>Paragraph</h2>
+                    <p class="para_content">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
                     </p>
                 </div>
                 <div class="content-1">
-                    <h2 style="font-weight: 400;">Paragraph</h2>
-                    <p>
+                    <h2 style="font-weight: 400;" class='para_title'>Paragraph</h2>
+                    <p class="para_content">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
                     </p>
                 </div>
@@ -37,16 +41,51 @@
 
         let titleController = document.getElementById("title_controller"),
             titleElement = document.getElementById("title_element");
-        
-    // Functions on Events 
-    function changeTitle(somevalue){
-        let temp = (somevalue.target.value)
-        titleElement.innerText = temp;
-    }
-        
+            // Inititializing with default Values
+                    for(let i = 48; i <= 128; i++){
+                        let ele = document.createElement('option')
+                        ele.value = i;
+                        ele.innerText = i;
+                        if(i == 64){
+                            ele.selected = 'selected'
+                        }
+                        titleController.appendChild(ele)
+                    }
+                    titleElement.style.margin = '10px'
+                    titleElement.style.padding = '0px'
+                    titleElement.style.borderTop = '1px solid #dedede'
+                    titleElement.style.borderBottom= '1px solid #dedede'
+                    
+        // Functions on Events 
+            function changeTitle(somevalue){
+                let temp = somevalue ? (somevalue.target.value) : 64;
+                titleElement.style.fontSize = temp;
+
+                let para_title = document.querySelectorAll(".para_title");
+                let para_content = document.querySelectorAll(".para_content");
+
+                // console.log(para_title)
+
+                para_title.forEach(element=>{
+                    element.style.borderTop = '1px solid #dedede'
+                    element.style.borderBottom= '1px solid #dedede'
+                    element.style.fontSize = temp/1.618;
+                })
+                para_content.forEach(elemet=>{
+                    let parent_size = temp/1.618;
+                    elemet.style.fontSize = parent_size/1.618;
+                })
+
+            }
+            changeTitle(null)
 
     
 
 
     </script>
+    <style>
+        .content-1{
+            padding:5px;
+        }
+    </style>
 </html>
