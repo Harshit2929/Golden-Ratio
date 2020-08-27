@@ -40,12 +40,12 @@ a:focus{
 }
 .wrapper{
     display: flex;
-    width:76%;
+    width:auto;
     align-items:stretch;
 }
 #sidebar{
-  width:38%;
-
+    width:38%;
+    height: 100vh;
     background: #005086;
     color:#fff;
     transition: all 0.3s;
