@@ -11,43 +11,22 @@
 
 <body>
 
-  <div class="wrapper">
-    <div class="row">
-      <div id="sidebar" class="col-lg-2">
-        <div class="sidebar-header">
-          <h3>APPLICATIONS</h3>
-        </div>
+
+  <div class="row">
+    <div id="sidebar" class="col-lg-4">
+      <div class="sidebar-header">
+        <h3>APPLICATIONS</h3>
+      </div>
 
 
-        <ul class="list-unstyled components">
-          <li>
-            <a href="#">Nature</a>
-          </li>
-
-          <li>
-            <a href="#artSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ART</a>
-
-            <ul class="collapse list-unstyled" id="artSubmenu">
-              <li>
-                <a href="#">page1</a>
-              </li>
-              <li>
-                <a href="#">page2</a>
-              </li>
-              <li>
-                <a href="#">page3</a>
-              </li>
-            </ul>
-
-          </li>
-
+      <ul class="list-unstyled components">
+        <li>
+          <a href="#nature">Nature</a>
+        </li>
 
           <li>
-            <a href="#">ARCHITECTURE</a>
-          </li>
 
-          <li>
-            <a href="#">FINANCE</a>
+            <a href="#art">Art</a>
           </li>
           <li>
             <a href="#" onclick="loadUrl('imageConverter.html')">Image Converter</a>
@@ -61,92 +40,190 @@
           <iframe id='main_view' src='imageConverter.html' style="border: 0;width: 100%;height: 100%;"></iframe>
           <br />
 
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <li>
+          <a href="#architec">ARCHITECTURE</a>
+        </li>
 
-            <div class="line"></div>
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+        <li>
+          <a href="#imageCropper" onclick="">Image Cropper</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-8" id="content">
+     <img src="images/heading.gif" alt="">
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     <div class="jumbotron">
+  <img src="images/writer.jpg" alt="">
+  <p class="lead">“The Fibonacci Sequence turns out to be the key to understanding how nature designs... and is... a part of the same ubiquitous music of the spheres that builds harmony into atoms, molecules, crystals, shells, suns and galaxies and makes the Universe sing.”</p>
+<h5>― Guy Murchie, The Seven Mysteries of Life: An Exploration of Science and Philosophy</h6>
+</div>
+      <div class="imageGallery">
+        <img class="i1" src="images/face.jpeg" alt="">
+        <img class="i2" src="images/hurricane.jpg" alt="">
+        <img class="i3" src="images/pyramid1.jpeg" alt="">
+        <img class="i4" src="images/petals.jpg" alt="">
+        <img class="i5" src="images/nissan.jpg" alt="">
+      </div>
+      <!-- NATURE -->
+      <br>
+
+      <div id="nature">
+        <h2>NATURE</h2>
+        <div class="text-center row">
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Flower petals
+            </div>
+          <video class="Image" autoplay muted>
+           <source src="images/petals.mp4" type="video/mp4">
+          </video>
+            <div class="card-body">
+              Phi appears in petals on account of the ideal packing arrangement as selected by Darwinian processes; each petal is placed at 0.618034 per turn (out of a 360° circle)
+            </div>
+          </div>
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Spiral Galaxies
+            </div>
+            <img src="images/galaxy.jpg" class="ImageV card-img-top" alt="">
+            <div class="card-body">
+              The Milky Way has several spiral arms, each of them a logarithmic spiral of about 12 degrees. As an interesting aside, spiral galaxies appear to defy Newtonian physics.
+            </div>
+          </div>
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Shells
+            </div>
+                  <img src="images/shell.jpg" alt="" class="Image card-img-top">
+
+            <div class="card-body">
+              Snail shells and nautilus shells follow the logarithmic spiral, as does the cochlea of the inner ear.
+            </div>
+          </div>
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Tree branches
+            </div>
+              <img src="images/tree.jpg" alt="" class="Image card-img-top">
+            <div class="card-body">
+              The Fibonacci sequence can also be seen in the way tree branches form or split. A main trunk will grow until it produces a branch, which creates two growth points
+            </div>
+          </div>
 
 
         </div>
       </div>
-    </div>
-    <!-- <div class="container-fluid">
 
-    <div class="row">
 
-      <div class=" col-md-6 sidebar fixed-top">
-        <a class="navbar-brand" href="">APPLICATIONS</a>
+      <br>
+      <div id="art">
+        <h2>ART</h2>
+        <div class="text-center row">
+          <div class="card col">
 
-        <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="card-header">
+              Da Vinci's Artwork
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-         <ul class="list-unstyled">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="images/Monalisa.webp" class="card-img-top ImageV" alt="...">
+              </div>
+              <div class="col-md-4">
+                <img src="images/daVinci.jpg" class="Image card-img-top" alt="...">
+              </div>
+              <div class="artImage col-md-4">
+                <img src="images/daVinci1.jpg" class="Image card-img-top" alt="...">
+              </div>
+            </div>
 
-           <li class="nav-item">
-             <a class="nav-link" href="">NATURE</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="">ARTS</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="">ARCHITECTURE</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="">FINANCE</a>
-           </li>
-         </ul>
+            <div class="card-body">
+              Leonardo da Vinci, like many other artists throughout the ages, made extensive use of the Golden Ratio to create pleasing compositions.
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">In The Last Supper, the figures are arranged in the lower two thirds (the larger of the two parts of the Golden Ratio), and the position of Jesus is perfectly plotted by arranging golden rectangles across the
+                canvas.</li>
+            </ul>
+          </div>
+
+
+        </div>
+
       </div>
-    </div>
-      <div class="col-md-6">
 
+<!-- ARCHITECTURE -->
+      <div id="architec">
+        <h2>ARCHITECTURE</h2>
+        <div class="row text-center">
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Great Pyramid of Giza
+            </div>
+            <img src="images/pyramid1.jpeg" class="Image card-img-top" alt="">
+            <div class="card-body">
+              the Great Pyramid has a base of 230.4 meters (755.9 feet) and an estimated original height of 146.5 meters (480.6 feet). This also creates a height to base ratio of 0.636, which indicates it is indeed a Golden Triangles, at least to
+              within three significant decimal places of accuracy
+            </div>
+          </div>
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Parthenon
+            </div>
+            <img src="images/p1.jpg" class="Image card-img-top" alt="">
+            <div class="card-body">
+              Golden ratio rectangle that appear in the design work above the columns is a compelling evidence that the Greeks knew of, and applied, the golden ratio in the construction of the Parthenon.
+            </div>
+          </div>
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Taj Mahal
+            </div>
+            <img src="images/tajMahal.jpg" class="Image card-img-top" alt="">
+            <div class="card-body">
+              The main building of the Taj Mahal was designed using the Golden Ratio. This is why it looks so perfect. The rectangles that served as the basic outline for the exterior of the building were all in the Golden Proportion
+            </div>
+          </div>
+
+          <div class="card col-lg-6">
+            <div class="card-header">
+              Eiffel Tower
+            </div>
+            <img src="images/etower.png" class="ImageV card-img-top" alt="">
+            <div class="card-body">
+              Despite its enormous height, Eiffel Tower doesn’t look out of proportion, all thanks to the golden ratio.
+
+              The base is broader while it narrows down to the top, perfectly following the golden section & as needed for stability.
+            </div>
+          </div>
+        </div>
       </div>
-
+      <br>
+      <iframe id="imageCropper"src='imageConverter.html' style="border: 0;width: 100%;height: 100%;"></iframe>
     </div>
+  </div>
 
 
-    </div>
-    <!-- BOOTSTRAP JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
-    <script>
-      var main_view = document.getElementById('main_view')
-      
-      function loadUrl(url){
-        main_view.src = url
-      }
-      
-      $(document).ready(function() {
-        $("#sidebarCollapse").on('click', function() {
-          $("#sidebar").toggleClass('active');
-        })
+  <!-- BOOTSTRAP JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+<script src="index.js" charset="utf-8"></script>
 
-
-
-
-
-
-
+  <script>
+    $(document).ready(function() {
+      $("#sidebarCollapse").on('click', function() {
+        $("#sidebar").toggleClass('active');
       })
-
-
-
-
-    </script>
-    <!-- EXTERNAL JS -->
-    <script src="index.js" charset="utf-8"></script>
+    })
+  </script>
+  <!-- EXTERNAL JS -->
+  <script src="index.js" charset="utf-8"></script>
 
 </body>
 
