@@ -17,10 +17,28 @@ body{
    line-height: 1.5rem;
    padding: 20px;
  }
+ /* jumbotron */
+   .jumbotron{
+    width:70%;
+margin:auto;
+text-align: left;
+line-height: 2;
+margin-bottom: 60px;
+margin-top: 30px;
+   }
+.jumbotron img{
+
+float: left;
+padding-right: 30px;
+}
+ /* imageGallery */
  .imageGallery{
       width:500px;
       height:309px;
 position:relative;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
 
  }
  .i1{
@@ -63,9 +81,7 @@ bottom: 72.5px;
 right: 145.5px;
 
 }
-.nature{
 
-}
 a,
 a:hover,
 a:focus{
@@ -170,9 +186,15 @@ display: block;
 
 }
 
-.monaLisa{
-  height: 220px;
+ img.ImageV{
+background: url('images/Monalisa.webp');
+    height: 220px;
   width:154.5px;
+}
+img.ImageV:hover{
+background: url('images/monalisa1.png');
+height: 220px;
+width:154.5px;
 }
 @media(maz-width:768px){
     #sidebar{margin-left:-250px;}
