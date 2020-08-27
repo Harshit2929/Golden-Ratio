@@ -10,6 +10,9 @@ body{
      line-height: 1.7em;
      color:#999;
  }
+ html{
+    scroll-behavior: smooth;
+ }
 
  h2{
        font-size: 2rem;
