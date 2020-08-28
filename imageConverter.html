@@ -6,14 +6,14 @@
             <!-- <h1 style="background: white;width: 60%;">
                 Hover Images to make Colourfull and Click to Show It on Main Screen
             </h1> -->
-            
+
                 <div style="border:1px solid black;width:60%;padding:2px">
                     <h2>You can Upload Your Image</h2>
-    
-                    
+
+
                     <input accept="image/jpeg,image/png,image/jpg" type="file" onchange="selectImages(event)" />
                 </div>
-    
+
                 <h1> Golden Ratio Cropper</h1> <button id='save-btn' style="border-radius: 2px;cursor: pointer;border:0;padding:10px;font-size: 18px;background-color: teal;color: white;"> Save Image in viewport </button>
                 <div id="demo" style="left:120px;height: 50%;width: 40%;margin:10px"></div>
                 <br />
@@ -43,33 +43,33 @@
                 </div>
     <!-- Actually there is a lot of not usable code, I initially tried to make the croppie library implementation using Vanilla JS but faced some Canvas issues didn't Completed those, so this time I made all the work {display:none}, any body want to contribute can contribute later on -->
         <div id='ourElement' style="padding: 20px;display: none; ">
-    
+
             <img id='ourImageMain' style="display: none;width:100px" alt='Please Select the Image or upload some image' />
-    
+
             <br />
             <br />
-    
+
             <canvas id='viewport' style="display: none;"></canvas>
             <br />
-            
+
             <canvas id='anotherViewPort' width="0" height="0" style="display: none;"></canvas>
-            
+
         </div>
-    
-    
-    
+
+
+
         <div id='sampleContainer' style="border:1px solid #dedede;top:0;z-index:0;display: block;position: absolute;right:0px;padding:10px;width: 300px;height:100%;overflow: scroll;"></div>
         <script>
             var canvas = document.getElementById('viewport');
             var context = canvas.getContext('2d');
             let sampleContainer = document.getElementById('sampleContainer');
             let ourElement = document.getElementById("ourElement");
-    
+
             let anotherViewPort= document.getElementById('anotherViewPort');
             let anotherContext = anotherViewPort.getContext('2d')
-    
+
             let saveBtn = document.getElementById('save-btn')
-            
+
             var images = [];
             let sampleImages = [
                 'https://instagram.famd1-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/118355872_1871198183020789_7293723505863829746_n.jpg?_nc_ht=instagram.famd1-2.fna.fbcdn.net&_nc_cat=1&_nc_ohc=bx_LhLX1J4kAX9lGj7W&oh=16830c9a882d2b9bc4bae2fcc76005fa&oe=5F6D4277',
@@ -78,12 +78,12 @@
                 'https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E'
             ]
             let ourImageMouseCheck = document.getElementById('ourImageMain')
-              
+
             function getMousePosition(){
                 ourImageMouseCheck.onmousemove = (event)=>{
                     console.log({x:event.offsetX,y:event.offsetY,e:event})
                     let xPosition = event.offsetX, yPosition = event.offsetY;
-    
+
                     anotherContext.drawImage(ourImageMouseCheck,0,0)
                 }
             }
@@ -101,7 +101,7 @@
                     let anchor = document.getElementById('downloadable')
                     anchor.download = 'samplenew'+html.size+'.png';
                     anchor.href = link
-                    // $("#results").html(html)     
+                    // $("#results").html(html)
                             // html is div (overflow hidden)
                             // with img positioned inside.
                         });
@@ -110,20 +110,20 @@
                 save()
             })
             function nowGot(url,sampleWidth=null){
-    
+
                 let ourImage = document.getElementById('ourImageMain')
                         // $('#demo').croppie({
                         //     url: url
                         // });
-                        
+
                         croppieObject.croppie('bind', {
                             url: url,
                             points: [0,0,0,0]
                         });
-                        
+
                     // let croppieImg = document.querySelector(".cr-image")
                     // croppieImg.src = url
-                        
+
                     ourImage.src = url;
                     let length = 200;
                     ourImage.style.width = length*1.618 + 'px';
@@ -133,19 +133,19 @@
                         canvas.width = length*1.618;
                     canvas.height = length;
                     context.drawImage(ourImage, -1*0, -1.618*0);
-     
+
                     }
-                    
+
                 }
-    
+
                 nowGot('https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E')
-    
-                let t = document.createElement('h6')
-                    t.innerHTML = 'Selection Window'
+
+                let t = document.createElement('h4')
+                    t.innerHTML = 'Selection Window(User can select images from here also)'
                     sampleContainer.appendChild(t)
                     t = document.createElement('br')
                     sampleContainer.appendChild(t)
-    
+
             sampleImages.forEach((image,index)=>{
                 console.log(index)
                         let eachImg = document.createElement('img')
@@ -160,32 +160,32 @@
                         })
                         sampleContainer.appendChild(eachImg)
                     })
-    
-            
+
+
             function setImages(){
                 if(images.length > 0){
-    
+
                     let ourImage = document.getElementById('ourImageMain')
-                    
+
                     ourImage.src = URL.createObjectURL(images[0]);
-    
+
                     ourImage.style.width = '200px';
                     ourImage.style.height = '200px'
-    
+
                     let croppieImg = document.querySelector(".cr-image")
                     croppieImg.src = URL.createObjectURL(images[0])
                 }else{
                     alert("Some Error, Some IMage must be Selected !!")
                 }
             }
-    
+
             var selectImages = (event)=>{
                 // event.preventDefault();
                 console.log(event.target.files);
                 images = event.target.files;
-    
+
                 setImages()
-    
+
             }
         </script>
         <style>

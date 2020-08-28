@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            Typography | Golden Ratio
+           Golden Ratio Typography
         </title>
     </head>
     <body>
@@ -15,7 +15,7 @@
                 <div>
                     <lable class="special_label">Font Size</lable>
                     <select id='title_controller' type="text" placeholder="Enter Title of the Page" onchange="changeTitle(event)">
-                        
+
                     </select>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                     titleElement.style.padding = '0px'
                     titleElement.style.borderTop = '1px solid #dedede'
                     titleElement.style.borderBottom= '1px solid #dedede'
-                    
-        // Functions on Events 
+
+        // Functions on Events
             function changeTitle(somevalue){
                 let temp = somevalue ? (somevalue.target.value) : 64;
                 titleElement.style.fontSize = temp;
@@ -82,7 +82,7 @@
             }
             changeTitle(null)
 
-    
+
 
 
     </script>

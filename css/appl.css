@@ -191,7 +191,16 @@ display: block;
     margin-top: 20px;
 
 }
+.mla{
+  width:320px;
+  height:255px;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 
+
+}
 @media(maz-width:768px){
     #sidebar{margin-left:-250px;}
     #sidebar.active{
