@@ -87,12 +87,12 @@
             var context = canvas.getContext('2d');
             let sampleContainer = document.getElementById('sampleContainer');
             let ourElement = document.getElementById("ourElement");
-    
+
             let anotherViewPort= document.getElementById('anotherViewPort');
             let anotherContext = anotherViewPort.getContext('2d')
-    
+
             let saveBtn = document.getElementById('save-btn')
-            
+
             var images = [];
             let sampleImages = [
                 'https://instagram.famd1-2.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/118355872_1871198183020789_7293723505863829746_n.jpg?_nc_ht=instagram.famd1-2.fna.fbcdn.net&_nc_cat=1&_nc_ohc=bx_LhLX1J4kAX9lGj7W&oh=16830c9a882d2b9bc4bae2fcc76005fa&oe=5F6D4277',
@@ -101,12 +101,12 @@
                 'https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E'
             ]
             let ourImageMouseCheck = document.getElementById('ourImageMain')
-              
+
             function getMousePosition(){
                 ourImageMouseCheck.onmousemove = (event)=>{
                     console.log({x:event.offsetX,y:event.offsetY,e:event})
                     let xPosition = event.offsetX, yPosition = event.offsetY;
-    
+
                     anotherContext.drawImage(ourImageMouseCheck,0,0)
                 }
             }
@@ -124,7 +124,7 @@
                     let anchor = document.getElementById('downloadable')
                     anchor.download = 'samplenew'+html.size+'.png';
                     anchor.href = link
-                    // $("#results").html(html)     
+                    // $("#results").html(html)
                             // html is div (overflow hidden)
                             // with img positioned inside.
                         });
@@ -133,20 +133,20 @@
                 save()
             })
             function nowGot(url,sampleWidth=null){
-    
+
                 let ourImage = document.getElementById('ourImageMain')
                         // $('#demo').croppie({
                         //     url: url
                         // });
-                        
+
                         croppieObject.croppie('bind', {
                             url: url,
                             points: [0,0,0,0]
                         });
-                        
+
                     // let croppieImg = document.querySelector(".cr-image")
                     // croppieImg.src = url
-                        
+
                     ourImage.src = url;
                     let length = 200;
                     ourImage.style.width = length*1.618 + 'px';
@@ -158,7 +158,7 @@
                     context.drawImage(ourImage, -1*0, -1.618*0);
                         
                     }
-                    
+
                 }
     
                 nowGot(sampleImages[3])
@@ -179,7 +179,7 @@
                     sampleContainer.appendChild(t)
                     t = document.createElement('br')
                     sampleContainer.appendChild(t)
-    
+
             sampleImages.forEach((image,index)=>{
                 console.log(index)
                         let eachImg = document.createElement('img')
@@ -195,32 +195,32 @@
                         sampleContainer.appendChild(eachImg)
                         // Bad Practice, because appending at each iteration leads multiple rendering of Screen which is bad
                     })
-    
-            
+
+
             function setImages(){
                 if(images.length > 0){
-    
+
                     let ourImage = document.getElementById('ourImageMain')
-                    
+
                     ourImage.src = URL.createObjectURL(images[0]);
-    
+
                     ourImage.style.width = '200px';
                     ourImage.style.height = '200px'
-    
+
                     let croppieImg = document.querySelector(".cr-image")
                     croppieImg.src = URL.createObjectURL(images[0])
                 }else{
                     alert("Some Error, Some IMage must be Selected !!")
                 }
             }
-    
+
             var selectImages = (event)=>{
                 // event.preventDefault();
                 console.log(event.target.files);
                 images = event.target.files;
-    
+
                 setImages()
-    
+
             }
         </script>
         <style>
