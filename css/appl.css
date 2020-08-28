@@ -192,16 +192,6 @@ display: block;
 
 }
 
- img.ImageV{
-background: url('images/Monalisa.webp');
-    height: 220px;
-  width:154.5px;
-}
-img.ImageV:hover{
-background: url('images/monalisa1.png');
-height: 220px;
-width:154.5px;
-}
 @media(maz-width:768px){
     #sidebar{margin-left:-250px;}
     #sidebar.active{
