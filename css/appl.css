@@ -113,6 +113,7 @@ a:focus{
     margin-left:-250px;
 }
 #sidebar .sidebar-header{
+    text-align: center;
     padding:20px;
     background: #005086;
 }
@@ -201,12 +202,35 @@ display: block;
 
 
 }
-@media(maz-width:768px){
-    #sidebar{margin-left:-250px;}
+#toggleButton{
+    display: none;
+}
+@media(max-width:992px){
+    /* #sidebar{margin-left:-250px;}
     #sidebar.active{
         margin-left:0px;
     }
     #sidebarCollapse span{
         display:none;
+    } */
+    #toggleButton{
+        display: block;
     }
+    #sidebar {
+        flex: none;
+        margin: 0;
+    /* max-width: 33.333333%; */
+        /* position: sticky; */
+        top: 0;
+        /* height: 100vh; */
+        width: 100%;
+        
+        height: auto;
+        background: #005086;
+        color: #fff;
+        z-index: 1;
+        position: inherit;
+        /* display: block; */
+    }
+    
 }
