@@ -1,7 +1,7 @@
 body{
-  background-color:#010101;
+  background-image: linear-gradient(#7303c0,#ec38bc,#fdeff9);
   font-family: 'Roboto', sans-serif;
-  color: #ffff;
+  color: #000000;
 }
 
 h2{
@@ -57,27 +57,39 @@ li{
 
 #history{
     padding: 5% 8%;
-    text-align: center;
+    text-align: left;
+}
+#his{
+  text-align: center;
 }
 .himg{
-  padding-left: 25%;
+  padding-left: 35%;
+  padding-top: 15%;
 }
 .captio{
-  padding:10%;
+  padding:8%;
 }
 /* Mathematics */
 #Maths{
   padding: 7% 12%;
+  text-align: left;
+}
+
+#mbgr{
   text-align: center;
 }
-
-.mimg{
-
-padding : 20px 0;
-
+.mimg1{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 25%;
 }
-
-
+ .center{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+ }
 
 /* SLIDES */
 
