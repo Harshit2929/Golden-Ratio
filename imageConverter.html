@@ -1,65 +1,88 @@
 <html style="overflow: hidden;">
-    <div style="border:0px solid black;width:100%;height:80%;">
+    <link href='https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css' rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
+    <div style="border:0px solid black;width:100%;height:80%;padding-top:20px;padding-left: 10px;">
         <script src="js/jq.js" ></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js'></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" rel='stylesheet' />
             <!-- <h1 style="background: white;width: 60%;">
                 Hover Images to make Colourfull and Click to Show It on Main Screen
             </h1> -->
+            
+            <div style="display: inline-flex;">
 
-                <div style="border:1px solid black;width:60%;padding:2px">
-                    <h2>You can Upload Your Image</h2>
-
-
-                    <input accept="image/jpeg,image/png,image/jpg" type="file" onchange="selectImages(event)" />
-                </div>
-
-                <h1> Golden Ratio Cropper</h1> <button id='save-btn' style="border-radius: 2px;cursor: pointer;border:0;padding:10px;font-size: 18px;background-color: teal;color: white;"> Save Image in viewport </button>
-                <div id="demo" style="left:120px;height: 50%;width: 40%;margin:10px"></div>
-                <br />
-                <br />
-                <hr />
-                <h3>Cropped Image will be Showed here</h3>
-                <img id='results' src="" alt='Select Your Image First' />
-                <br /><br /><br />
-                <a class="d-btn" style="border:1px solid #dedede;text-decoration:none;padding:10px;margin:10px;" id='downloadable' download="sampleImage.png" href="#FirstCrop" >Download This Image</a>
+               <div style="width: 600px;height:600px">
+                <h1 class="title is-2" style="text-align: center;"> Golden Ratio Cropper</h1> 
                 <br /><br />
-                <hr />
-                <style>
-                    .d-btn{
-                        transition-duration: 0.2s;
-                        font-size: 20px;
-                        font-weight: 200;
-                    }
-                    .d-btn:hover{
-                        background-color: teal;
-                        color:white;
-                        border-radius:0px;
-                        box-shadow: 0 0 0 4px white,0 0 0 6px teal;
-                    }
-                </style>
-                <div style="width:90vw;display: flex;font-size:32px;bottom:0;position:absolute;font-weight: 200;">
-                    <span style="margin:0 auto">Made with ❤️️ Love for Hackathon</span>
-                </div>
-    <!-- Actually there is a lot of not usable code, I initially tried to make the croppie library implementation using Vanilla JS but faced some Canvas issues didn't Completed those, so this time I made all the work {display:none}, any body want to contribute can contribute later on -->
-        <div id='ourElement' style="padding: 20px;display: none; ">
-
-            <img id='ourImageMain' style="display: none;width:100px" alt='Please Select the Image or upload some image' />
-
-            <br />
-            <br />
-
-            <canvas id='viewport' style="display: none;"></canvas>
-            <br />
-
-            <canvas id='anotherViewPort' width="0" height="0" style="display: none;"></canvas>
-
-        </div>
-
-
-
-        <div id='sampleContainer' style="border:1px solid #dedede;top:0;z-index:0;display: block;position: absolute;right:0px;padding:10px;width: 300px;height:100%;overflow: scroll;"></div>
-        <script>
+    
+                    <div id="demo" style="left:120px;height: 60%;width: 100%;margin:10px;box-shadow: 0 0 10px #dedede;"></div>
+                    <div style="display: flex;margin-top: 50px;">
+                        
+                        <div class="file" style=margin:5px; >
+                            
+                            <label class="file-label">
+                                <input class="file-input" accept="image/jpeg,image/png,image/jpg" type="file" onchange="selectImages(event)" />
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                    Choose a file…
+                                    </span>
+                              </span>
+                            </label>
+                        </div>
+                        <button style="margin:5px"  id='save-btn' class="button is-link" > Save Image in viewport </button>
+                       
+                    </div>
+                    <!-- <hr /> -->
+                    <h3 class="title is-4">Cropped Image will be Showed here</h3>
+                    <img id='results' src="" alt='Select Your Image First' />
+                    <br /><br /><br />
+                    <a class="button is-primary" style="border:1px solid #dedede;text-decoration:none;padding:10px;margin:10px;" id='downloadable' download="sampleImage.png" href="#FirstCrop" >Download This Image</a>
+                    
+                    <!-- <hr /> -->
+                    <style>
+                        .d-btn{
+                            transition-duration: 0.2s;
+                            font-size: 20px;
+                            font-weight: 200;
+                        }
+                        .d-btn:hover{
+                            background-color: teal;
+                            color:white;
+                            border-radius:0px;
+                            box-shadow: 0 0 0 4px white,0 0 0 6px teal;
+                        }
+                    </style>
+                    <!-- <div style="width:90vw;display: flex;font-size:32px;bottom:0;position:absolute;font-weight: 200;">
+                        <span style="margin:0 auto">Made with ❤️️ Love for Hackathon</span>
+                    </div> -->
+        <!-- Actually there is a lot of not usable code, I initially tried to make the croppie library implementation using Vanilla JS but faced some Canvas issues didn't Completed those, so this time I made all the work {display:none}, any body want to contribute can contribute later on -->
+            <div id='ourElement' style="padding: 20px;display: none; ">
+        
+                <img id='ourImageMain' style="display: none;width:100px" alt='Please Select the Image or upload some image' />
+        
+                <br />
+                <br />
+        
+                <canvas id='viewport' style="display: none;"></canvas>
+                <br />
+                
+                <canvas id='anotherViewPort' width="0" height="0" style="display: none;"></canvas>
+                
+            </div>
+        
+        
+        
+               </div>
+        <div id='sampleContainer' style="border:0px solid #dedede;top:0;z-index:0;display: block;position: absolute;right:0px;padding:0px;width: 350px;height: 800px;overflow-y:scroll;"></div>
+        
+            </div>
+            
+            
+            <script>
             var canvas = document.getElementById('viewport');
             var context = canvas.getContext('2d');
             let sampleContainer = document.getElementById('sampleContainer');
@@ -133,15 +156,26 @@
                         canvas.width = length*1.618;
                     canvas.height = length;
                     context.drawImage(ourImage, -1*0, -1.618*0);
-
+                        
                     }
 
                 }
-
-                nowGot('https://instagram.famd1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/116834582_1174308969618490_6690354896972589113_n.jpg?_nc_ht=instagram.famd1-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=RgDqeqpCP_UAX-4kO_r&oh=8cd1d5950a6819c6ec7f50b7febc5246&oe=5F6F4A5E')
-
-                let t = document.createElement('h4')
-                    t.innerHTML = 'Selection Window(User can select images from here also)'
+    
+                nowGot(sampleImages[3])
+    
+                let t = document.createElement('div')
+                t.style.top = "0"
+                t.style.position = 'sticky'
+                t.style.zIndex = 2
+                t.style.margin = 0
+                t.style.padding = "10px"
+                t.style.background = 'white'
+                t.style.borderBottom = "1px solid #dedede"
+                t.style.borderLeft = "1px solid #dedede"
+                t.style.boxShadow = "0 0 10px #dedede"
+                
+                    t.setAttribute("class","title is-3");
+                    t.innerHTML = 'Selection Window'
                     sampleContainer.appendChild(t)
                     t = document.createElement('br')
                     sampleContainer.appendChild(t)
@@ -159,6 +193,7 @@
                             nowGot(sampleImages[index])
                         })
                         sampleContainer.appendChild(eachImg)
+                        // Bad Practice, because appending at each iteration leads multiple rendering of Screen which is bad
                     })
 
 
