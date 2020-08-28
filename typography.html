@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>
+            Typography | Golden Ratio
+        </title>
+    </head>
+    <body>
+        <div style="width: 100vw;text-align: center;font-size: 64px;font-weight: 400;margin:20px;">Typography | Golden Ratio</div>
+        <div style="text-align: center;font-size: 26px;display: flex;padding:5px;">
+            <p style="width: 80%;margin: 0 auto;">Here, in this document we set the Font Size of main Heading and based on that we specify the font Size of other Elements</p>
+        </div>
+        <div id='controls' style="border:1px solid #dedede;display: flex;">
+            <div style="padding:5px;">
+                <label class="title_controller_self">Title</label>
+                <div>
+                    <lable class="special_label">Font Size</lable>
+                    <select id='title_controller' type="text" placeholder="Enter Title of the Page" onchange="changeTitle(event)">
+                        
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id='controlled_content'>
+            <h1 id='title_element' style="font-weight: 400;text-transform: capitalize;">Section Title</h1>
+            <div style="display: flex;">
+                <div class="content-1">
+                    <h2 style="font-weight: 400;" class='para_title'>Paragraph</h2>
+                    <p class="para_content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h2 style="font-weight: 400;" class='para_title'>Paragraph</h2>
+                    <p class="para_content">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero libero velit excepturi asperiores! Qui, doloribus aspernatur cumque beatae laboriosam atque, voluptatum reiciendis iure neque obcaecati impedit quidem? Autem, deserunt reiciendis?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+
+        /* Declarations */
+
+        let titleController = document.getElementById("title_controller"),
+            titleElement = document.getElementById("title_element");
+            // Inititializing with default Values
+                    for(let i = 48; i <= 128; i++){
+                        let ele = document.createElement('option')
+                        ele.value = i;
+                        ele.innerText = i;
+                        if(i == 64){
+                            ele.selected = 'selected'
+                        }
+                        titleController.appendChild(ele)
+                    }
+                    titleElement.style.margin = '10px'
+                    titleElement.style.padding = '0px'
+                    titleElement.style.borderTop = '1px solid #dedede'
+                    titleElement.style.borderBottom= '1px solid #dedede'
+                    
+        // Functions on Events 
+            function changeTitle(somevalue){
+                let temp = somevalue ? (somevalue.target.value) : 64;
+                titleElement.style.fontSize = temp;
+
+                let para_title = document.querySelectorAll(".para_title");
+                let para_content = document.querySelectorAll(".para_content");
+
+                // console.log(para_title)
+
+                para_title.forEach(element=>{
+                    // element.style.borderTop = '1px solid #dedede'
+                    // element.style.borderBottom= '1px solid #dedede'
+                    element.style.fontSize = temp/1.618;
+                })
+                para_content.forEach(elemet=>{
+                    let parent_size = temp/1.618;
+                    elemet.style.fontSize = parent_size/1.618;
+                })
+
+            }
+            changeTitle(null)
+
+    
+
+
+    </script>
+    <style>
+        .content-1{
+            padding:5px;
+        }
+        #controls > div,select{
+            padding:5px;
+            border:0;
+            font-size: 32px;
+        }
+        select{
+            transition-duration: 0.2s;
+        }
+        select:hover{
+            cursor: pointer;
+            background-color: #005086;
+                        color:white;
+                        border-radius:0px;
+                        box-shadow: 0 0 0 4px white,0 0 0 6px teal;
+        }
+        ::selection{
+            background-color: #005086;
+            color: white;
+        }
+        option{
+            background-color: white;
+            color:black;
+        }
+        .title_controller_self{
+            font-size: 42px;text-align: center;
+
+        }
+        .special_label::after{
+            content: ':';
+        }
+    </style>
+</html>

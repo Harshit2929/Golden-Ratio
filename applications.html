@@ -12,7 +12,7 @@
 <body>
 
 
-  <div class="row">
+  <div class="row" style="margin:0">
     <div id="sidebar" class="col-lg-4">
       <div class="sidebar-header">
         <h3>APPLICATIONS</h3>
@@ -26,18 +26,21 @@
           
           <li>
 
-         <a href="#art">Art</a>
-        </li>
-        
-          <li>
+        <li>
 
-            <a href="#architec">Architecture</a>
-          </li>
+          <a href="#art">Arts</a>
+        </li>
+        <li>
+
+          <a href="#architec">Architecture</a>
+        </li>
           <li>
-            <a href="#imageCropper" onclick="loadUrl('imageConverter.html')">Image Converter</a>
-          </li>
+          <a href="#imageConverter">Image Converter</a>
+     
+        </li>
+                 
           <li>
-            <a href="#" onclick="loadUrl('textBeautify.html')">Text Beautify</a>
+            <a href="#typography" onclick="loadUrl('textBeautify.html')">Text Beautify</a>
           </li>
         </ul>
 </div>
@@ -137,7 +140,7 @@
 
             <div class="row">
               <div class="col-md-4">
-                <img src="images/Monalisa.webp" class="card-img-top ImageV" alt="...">
+                <img src="images/Monalisa.webp" id='monalisa_function' class="card-img-top ImageV" alt="...">
               </div>
               <div class="col-md-4">
                 <img src="images/daVinci.jpg" class="Image card-img-top" alt="...">
@@ -209,7 +212,11 @@
         </div>
       </div>
       <br>
-      <iframe id="imageCropper"src='imageConverter.html' style="border: 0;width: 100%;height: 120vh;"></iframe>
+
+      <iframe id="imageConverter" src='imageConverter.html' style="border: 0;width: 100%;height: 120vh;"></iframe>
+      <hr />
+      <iframe id="typography" src='typography.html' style="border: 0;width: 100%;height: 120vh;"></iframe>
+      
     </div>
   </div>
 
@@ -225,7 +232,21 @@
       $("#sidebarCollapse").on('click', function() {
         $("#sidebar").toggleClass('active');
       })
+
+      let monalisa_function = document.getElementById("monalisa_function");
+      monalisa_function.addEventListener('mouseenter',()=>{
+        // alert("S")
+        monalisa_function.src = 'images/monalisa.png';
+      })
+      monalisa_function.addEventListener('mouseleave',()=>{
+        // alert("S")
+        monalisa_function.src = 'images/Monalisa.webp';
+      })
+
+
     })
+
+
   </script>
   <!-- EXTERNAL JS -->
   <script src="index.js" charset="utf-8"></script>
