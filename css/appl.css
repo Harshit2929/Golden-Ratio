@@ -20,6 +20,10 @@ body{
    line-height: 1.5rem;
    padding: 20px;
  }
+ .row{
+      margin:0;
+
+ }
  /* jumbotron */
    .jumbotron{
     width:70%;
@@ -233,4 +237,7 @@ display: block;
         /* display: block; */
     }
     
+
+
+
 }
