@@ -111,28 +111,6 @@ width: 25%;
   font-weight: lighter;
   }
 
-#but_ton {
-    width: 6em;
-    border: 2px solid #7303c0;
-    background: #ffe;
-    border-radius: 50%;
-    align-items: center;
-    
-}
-a {
-    display: block;
-    width: 100%;
-    line-height: 2em;
-    text-align: center;
-    text-decoration: none;
-    font-family:inherit;
-}
-a:hover {
-    color: #7303c0;
-    background: #fff;
-    cursor:pointer;
-}
-
 @media (max-width:1000px) {
 
 .mimg{
