@@ -51,7 +51,7 @@
                         let ele = document.createElement('option')
                         ele.value = i;
                         ele.innerText = i;
-                        if(i == 64){
+                        if(i == 48){
                             ele.selected = 'selected'
                         }
                         titleController.appendChild(ele)
@@ -63,7 +63,7 @@
 
         // Functions on Events
             function changeTitle(somevalue){
-                let temp = somevalue ? (somevalue.target.value) : 64;
+                let temp = somevalue ? (somevalue.target.value) : 48;
                 titleElement.style.fontSize = temp;
 
                 let para_title = document.querySelectorAll(".para_title");
