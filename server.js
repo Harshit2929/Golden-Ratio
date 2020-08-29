@@ -14,4 +14,10 @@ app.post('/updatestate', (req, res) => {
     res.json(newValue);
 });
 
+app.get('/api/v1/test', (req, res) => {
+    res.status(400).json({
+        message: "Success"
+    })
+})
+
 module.exports.handler = serverless(app);
