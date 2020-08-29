@@ -13,7 +13,7 @@
 
 
   <div class="row">
-    <div id="sidebar" class="col-lg-4">
+    <div id="sidebar" class="col-sm-4">
       <div class="sidebar-header">
         <h3>APPLICATIONS</h3>
       </div>
@@ -47,8 +47,8 @@
 
 
 
-    <div class="col-lg-8" id="content">
-      
+    <div class="col-sm-8" id="content">
+
      <img src="images/heading.gif" alt="">
 
      <div class="jumbotron">
@@ -70,7 +70,7 @@
         <h2>NATURE</h2>
         <div class="text-center row">
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Flower petals
             </div>
@@ -82,7 +82,7 @@
             </div>
           </div>
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Spiral Galaxies
             </div>
@@ -92,7 +92,7 @@
             </div>
           </div>
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Shells
             </div>
@@ -103,7 +103,7 @@
             </div>
           </div>
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Tree branches
             </div>
@@ -129,13 +129,13 @@
             </div>
 
             <div class="row">
-               <div class="col-md-4">
+               <div class="col-sm-4">
                 <img src="images/Monalisa.webp" id='monalisa_function' class="card-img-top ImageV" alt="...">
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-4">
                 <img src="images/daVinci.jpg" class="Image card-img-top" alt="...">
               </div>
-              <div class="artImage col-md-4">
+              <div class="artImage col-sm-4">
                 <img src="images/daVinci1.jpg" class="Image card-img-top" alt="...">
               </div>
             </div>
@@ -158,7 +158,7 @@
       <div id="architec">
         <h2>ARCHITECTURE</h2>
         <div class="row text-center">
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Great Pyramid of Giza
             </div>
@@ -168,7 +168,7 @@
               within three significant decimal places of accuracy
             </div>
           </div>
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Parthenon
             </div>
@@ -178,7 +178,7 @@
             </div>
           </div>
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Taj Mahal
             </div>
@@ -188,7 +188,7 @@
             </div>
           </div>
 
-          <div class="card col-lg-6">
+          <div class="card col-sm-6">
             <div class="card-header">
               Eiffel Tower
             </div>
@@ -226,10 +226,11 @@
       let monalisa_function = document.getElementById("monalisa_function");
       monalisa_function.addEventListener('mouseenter',()=>{
         // alert("S")
+          monalisa_function.src = 'images/monalisa.png';
         monalisa_function.classList.remove("ImageV");
         monalisa_function.classList.add("mla");
 
-        monalisa_function.src = 'images/monalisa.png';
+
 
       })
       monalisa_function.addEventListener('mouseleave',()=>{
