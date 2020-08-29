@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>APPLICATIONS</title>
   <!-- BOOTSTRAP CDN -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   <link rel="stylesheet" href="css/appl.css">
 </head>
@@ -12,14 +13,33 @@
 <body>
 
 
-  <div class="row">
-    <div id="sidebar" class="col-sm-4">
-      <div class="sidebar-header">
+  <div class="row" style="margin:0">
+    <div id="sidebar" class="col-lg-4">
+      <div class="sidebar-header" style="display: flex;">
         <h3>APPLICATIONS</h3>
+            <button
+              class="button" id='toggleButton'
+                style="right:0; position: absolute;
+                margin-right: 20px;
+                border: 1px solid white;
+                border-radius: 1px;
+                color: white;
+                cursor: pointer;
+                justify-content: center;
+                padding-bottom: calc(.5em - 1px);
+                padding-left: 1em;
+                padding-right: 1em;
+                padding-top: calc(.5em - 1px);
+                text-align: center;
+                white-space: nowrap;
+                background-color: transparent;">
+
+              <i class="fa fa-bars"></i>
+
+            </button>
       </div>
 
-
-      <ul class="list-unstyled components">
+      <ul id='sidebarContent' class="list-unstyled components">
         <li>
           <a href="#nature">Nature</a>
         </li>
@@ -47,7 +67,7 @@
 
 
 
-    <div class="col-sm-8" id="content">
+    <div class="col-lg-8" id="content">
 
      <img src="images/heading.gif" alt="">
 
@@ -70,7 +90,7 @@
         <h2>NATURE</h2>
         <div class="text-center row">
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Flower petals
             </div>
@@ -82,7 +102,7 @@
             </div>
           </div>
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Spiral Galaxies
             </div>
@@ -92,7 +112,7 @@
             </div>
           </div>
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Shells
             </div>
@@ -103,7 +123,7 @@
             </div>
           </div>
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Tree branches
             </div>
@@ -129,13 +149,13 @@
             </div>
 
             <div class="row">
-               <div class="col-sm-4">
+               <div class="col-lg-4">
                 <img src="images/Monalisa.webp" id='monalisa_function' class="card-img-top ImageV" alt="...">
               </div>
-              <div class="col-sm-4">
+              <div class="col-lg-4">
                 <img src="images/daVinci.jpg" class="Image card-img-top" alt="...">
               </div>
-              <div class="artImage col-sm-4">
+              <div class="artImage col-lg-4">
                 <img src="images/daVinci1.jpg" class="Image card-img-top" alt="...">
               </div>
             </div>
@@ -158,7 +178,7 @@
       <div id="architec">
         <h2>ARCHITECTURE</h2>
         <div class="row text-center">
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Great Pyramid of Giza
             </div>
@@ -168,7 +188,7 @@
               within three significant decimal places of accuracy
             </div>
           </div>
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Parthenon
             </div>
@@ -178,7 +198,7 @@
             </div>
           </div>
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Taj Mahal
             </div>
@@ -188,7 +208,7 @@
             </div>
           </div>
 
-          <div class="card col-sm-6">
+          <div class="card col-lg-6">
             <div class="card-header">
               Eiffel Tower
             </div>
@@ -239,6 +259,36 @@
         monalisa_function.classList.remove("mla");
 
        monalisa_function.classList.add("ImageV");
+      })
+
+      let toggleButton = document.getElementById("toggleButton")
+      let toggleStatus = false
+
+      // sidebarContent.style.display = "none"
+
+      let sidebarContent = document.getElementById("sidebarContent")
+      window.onresize = ()=>{
+        if(window.innerWidth < 994){
+        sidebarContent.style.display = "none"
+      }else{
+        sidebarContent.style.display = "block"
+      }
+      }
+
+      if(window.innerWidth < 994){
+        sidebarContent.style.display = "none"
+      }
+
+
+      // sidebarContent.style.transitionDuration = '0.2s'
+      toggleButton.addEventListener('click',function(){
+        if(toggleStatus){
+          toggleStatus = false;
+          sidebarContent.style.display = "none"
+        }else{
+          toggleStatus = true;
+          sidebarContent.style.display = "block"
+        }
       })
 
 
