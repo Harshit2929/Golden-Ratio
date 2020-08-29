@@ -1,23 +1,26 @@
-'use strict';
-const express = require('express');
-const serverless = require('serverless-http');
-const app = express();
+const express = require("express");
+const app = express()
 
-function updateDatabase(data) {
-    //   ... // update the database
-    return newValue;
-}
+const port = 1337 || process.env.PORT;
 
-app.use(express.static('public'));
-app.post('/updatestate', (req, res) => {
-    const newValue = updateDatabase(res.body);
-    res.json(newValue);
-});
 
-app.get('/api/v1/test', (req, res) => {
-    res.status(400).json({
-        message: "Success"
+app.use(express.static('public'))
+
+app.post('/api/v1/newsletter', function(request, response) {
+    response.status(400).json({
+        result: "POST API Working"
     })
 })
 
-module.exports.handler = serverless(app);
+app.get('/api/v1/testing', function(request, response) {
+
+    console.log("This GET API was Triggered");
+
+    response.status(400).json({
+        result: "APIs are Working correctly"
+    })
+})
+
+app.listen(port, () => {
+    console.log(`Server Started at PORT = ${port}`)
+})

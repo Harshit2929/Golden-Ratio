@@ -4,8 +4,7 @@
     "description": "project for hackathon Hackbenchers #4.0",
     "main": "index.js",
     "scripts": {
-        "build": "node server",
-        "start": "node index.js"
+        "start": "node server.js"
     },
     "repository": {
         "type": "git",
