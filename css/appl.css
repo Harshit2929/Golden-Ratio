@@ -20,6 +20,10 @@ body{
    line-height: 1.5rem;
    padding: 20px;
  }
+ .row{
+      margin:0;
+
+ }
  /* jumbotron */
    .jumbotron{
     width:70%;
@@ -202,11 +206,8 @@ display: block;
 
 }
 @media(maz-width:768px){
-    #sidebar{margin-left:-250px;}
-    #sidebar.active{
-        margin-left:0px;
+    #sidebar{
+      visibility: hidden;
     }
-    #sidebarCollapse span{
-        display:none;
-    }
+
 }
