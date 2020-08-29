@@ -209,6 +209,10 @@ display: block;
 #toggleButton{
     display: none;
 }
+
+#imageConverter{
+    height: 140vh;
+}
 @media(max-width:992px){
     /* #sidebar{margin-left:-250px;}
     #sidebar.active{
@@ -236,7 +240,7 @@ display: block;
         position: inherit;
         /* display: block; */
     }
-    
+   
 
 
 
