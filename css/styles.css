@@ -68,6 +68,7 @@ li{
 }
 .captio{
   padding:8%;
+  color:#000;
 }
 /* Mathematics */
 #Maths{
@@ -121,6 +122,8 @@ button {
   outline:none;
   margin:5% 50% 5% 50%;
   text-decoration: none;
+  display:flex;
+  justify-content:center;
   
 }
 button:hover {
