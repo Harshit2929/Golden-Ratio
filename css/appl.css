@@ -213,9 +213,6 @@ display: block;
 #imageConverter{
     height: 140vh;
 }
-.imageGallery{
-    width: 100%;
-}
 @media(max-width:992px){
     /* #sidebar{margin-left:-250px;}
     #sidebar.active{
