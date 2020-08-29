@@ -10,7 +10,7 @@ let questions =[
 	},
 	{
 		id:2,
-		question:"What do we call a sequence as if a term belonging to this sequence is the sum of the previous two terms?",
+		question:"What is a sequence called, if a term belonging to this sequence is the sum of the previous two terms?",
 		answer:"Fibonacci Sequence",
 		options:["Lebnitz Sequence","Bernoulli Sequence" ,"Fibonacci Sequence" ,"None of these"]
 	},
