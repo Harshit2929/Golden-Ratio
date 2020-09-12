@@ -1,0 +1,145 @@
+*{
+  font-size: 18px;
+}
+body{
+  background-image: linear-gradient(to right,#4DA0B0,#D39D38);
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
+h2{
+      font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding-bottom: 30px;
+}
+.container-fluid{
+  padding: 3% 15%;
+  padding-top: 150px;
+}
+hr{
+  margin: 50px auto;
+  border-style:dotted none none none;
+  border-color:#EAF6F6;
+  border-width:8px;
+  width: 5%;
+}
+.yout{
+  padding-left: 60px;
+
+}
+/* NAVIGATION BAR */
+.navbar{
+  color:#010101;
+  padding:0 30px 0.1rem 30px;
+  z-index: 999;
+}
+
+.navbar-brand{
+     font-size: 2rem;
+     font-weight: bold;
+   }
+.nav-item{
+  padding : 0 18px;
+
+}
+.nav-link{
+  font-size: 1.2rem;
+}
+.h-button{
+  margin: 5% 3% 5% 0;
+}
+
+ul{
+  list-style: square;
+}
+li{
+  padding-bottom: 10px;
+}
+/* HISTORY */
+
+#history{
+    padding: 5% 8%;
+    text-align: left;
+}
+#his{
+  text-align: center;
+}
+.himg{
+  padding-left: 35%;
+  padding-top: 15%;
+}
+.captio{
+  padding:8%;
+}
+/* Mathematics */
+#Maths{
+  padding: 7% 12%;
+  text-align: left;
+}
+
+#mbgr{
+  text-align: center;
+}
+.mimg1{
+  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 25%;
+}
+ .center{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+ }
+
+/* SLIDES */
+
+.slide2{
+  text-align: center;
+}
+
+.slide2-heading{
+  padding-top: 5%;
+  padding-bottom: 0;
+}
+
+.carousel-item{
+    padding: 5% 20%;
+}
+
+.slide2-text{
+  color:#ffff;
+  font-weight: lighter;
+  }
+
+button {
+  background-color: #4DA0B0;
+  color:#fff;
+  padding:15px 35px;
+  border:none;
+  border-radius: 27px;
+  transition:0.4s all;
+  outline:none;
+  text-decoration: none;
+  margin-left: 45%;
+  margin-top: 30px;
+}
+button:hover {
+  cursor:pointer;
+  background-color: #fff;
+  color:#4DA0B0;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+  outline:none;
+}
+
+@media (max-width:1000px) {
+
+.mimg{
+
+padding : 20px 0;
+ height: 200px;
+ width: 200px;
+}
+}
