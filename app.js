@@ -5,7 +5,6 @@ const app=express();
 const https=require("https");
 app.use(bodyParser.urlencoded({extended:true}));
 const request=require("request");
-app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.get("/",function(rq,res){
   res.sendFile(__dirname+"/signup.html");

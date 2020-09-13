@@ -23,4 +23,4 @@ Helps users understand different applications of Golden ratio in Nature, Art, Ar
 + BOOTSTRAP
 
 
-Our Demo Application is accessible at https://golden-ratio-hack.netlify.app
+Our Demo Application is accessible at https://golden-ratiohack.netlify.app
