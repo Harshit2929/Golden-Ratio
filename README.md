@@ -13,7 +13,8 @@ Helps users understand different applications of Golden ratio in Nature, Art, Ar
 
 (2) Text Beautify
  + It provides the perfect typography for your website by entering your current font, font size, and content width.
- (3)User can also subscribe to our Newsletter.
+ 
+(3)User can also subscribe to our Newsletter.
 
 ## Tech/Framework used
 + HTML
@@ -23,5 +24,5 @@ Helps users understand different applications of Golden ratio in Nature, Art, Ar
 + BOOTSTRAP
 
 
-Our Demo Application is accessible at https://golden-ratio-hack.netlify.app
+Our Demo Application is accessible at https://hidden-retreat-29624.herokuapp.com/
 
