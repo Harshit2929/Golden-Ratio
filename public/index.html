@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
   <title>GOLDEN RATIO</title>
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   <!-- BOOTSTRAP CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link rel="icon" href="images/fla.png">
   <link href="css/loader.css" rel="stylesheet">
   <!-- FONTS-AWESOME -->
@@ -20,7 +20,7 @@
 
 
 </head>
-  
+
   <div id="loader-wrapper">
 		<div id="loader"></div>
 
@@ -39,7 +39,7 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item">
-              <a class="nav-link" href="#history">History</a>
+              <a class="nav-link" href="#quiz">Quiz</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#Maths">Mathematics</a>
@@ -81,7 +81,7 @@
 
 
 <!-- HISTORY -->
-  <section id="history">
+<!--   <section id="history">
 
 
     <h2 id="his">HISTORY</h2>
@@ -120,7 +120,7 @@
     </div>
   </section>
 <hr>
-
+ -->
   <!-- Maths -->
 
   <section id="Maths">
@@ -132,25 +132,25 @@
         Two quantities a and b are said to be in the golden ratio φ if
       </p>
       <p>
-        <img class="center" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf7e51356f54a831db021e7e46922c778bbd91c0">
+        <img class="center bg-dark" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf7e51356f54a831db021e7e46922c778bbd91c0">
       </p>
       <p>
         Therefore,
       </p>
       <p>
-        <img class="center" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5d253b8b63fe6f4a656787c015bec7e36645b04d">
+        <img class="center bg-dark" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5d253b8b63fe6f4a656787c015bec7e36645b04d">
       </p>
       <p>
         which can be rearranged to :
       </p>
       <p>
-        <img class="center" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/909a0da5459476692cb089d9b951d4284387e927">
+        <img class="center bg-dark" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/909a0da5459476692cb089d9b951d4284387e927">
       </p>
       <p>
         Because φ is the ratio between positive quantities, φ is necessarily positive:
       </p>
       <p>
-        <img class="center" class="mimg" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1c9b7ed65783d1cdb2dfa7abd1361b1c1553bbe6" ; </p>
+        <img class="center bg-dark" class="mimg" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1c9b7ed65783d1cdb2dfa7abd1361b1c1553bbe6" ; </p>
         <br>
       <p>
         The Golden Ratio can be illustrated using a Golden Rectangle. This is a rectangle where, if you cut off a square (side length equal to the shortest side of the rectangle), the rectangle that's left will have the same proportions as the
@@ -256,13 +256,22 @@
     </div>
   </div>
 <hr>
+	<section id="quiz">
 
-  <section id="Applications">
-
-</section>
+	<h2 id="mbgr">Time for a quiz </h2>
+	<h3 id="mbgr">Click on the button below to navigate to the quiz page</h3>
+	<a href="start_quiz.html"><button>QUIZ_TIME!!</button></a>
+	</section>
 
 
 <hr>
+<div class="jumbotron">
+<h1 class="display-4">Want to know more about Golden Ratio</h1>
+<p class="lead">Click the button below</p>
+<form action="/signup" method="post">
+<a href="signup.html"><button class="btn btn-large"type="button" name="button">Subscribe</button></a>
+</form>
+</div>
   <footer id="footer">
 
   </footer>
@@ -272,9 +281,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 
 <!-- EXTERNAL JS -->
-  <script src="index.js" charset="utf-8"></script>
-	<script src="loader.js" charset="utf-8"></script>
-
+	<script>
+    $(document).ready(function(){
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	},3000);
+});
+  </script>
 </body>
 
 </html>
