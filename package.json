@@ -1,24 +1,25 @@
 {
-    "name": "golden-ratio",
-    "version": "1.0.0",
-    "description": "project for hackathon Hackbenchers #4.0",
-    "main": "index.js",
-    "scripts": {
-        "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Harshit424/Golden-Ratio.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Harshit424/Golden-Ratio/issues"
-    },
-    "homepage": "https://github.com/Harshit424/Golden-Ratio#readme",
-    "dependencies": {
-        "body-parser": "^1.19.0",
-        "express": "^4.17.1",
-        "serverless-http": "^2.5.0"
-    }
+  "name": "golden-ratio",
+  "version": "1.0.0",
+  "description": "Project For Hackbenchers#4.0",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshit424/Golden-Ratio.git"
+  },
+  "author": "Software_chasers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshit424/Golden-Ratio/issues"
+  },
+  "homepage": "https://github.com/Harshit424/Golden-Ratio#readme"
 }
