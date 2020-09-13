@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/appl.css">
+  <link rel="stylesheet" href="public/css/appl.css">
 </head>
 
 <body>
@@ -20,10 +20,10 @@
       <div class="sidebar-header" style="display: flex;">
 
         <h3>APPLICATIONS</h3>
-            <button 
-              class="button" id='toggleButton' 
+            <button
+              class="button" id='toggleButton'
                 style="right:0; position: absolute;
-                margin-right: 20px;  
+                margin-right: 20px;
                 border: 1px solid white;
                 border-radius: 1px;
                 color: white;
@@ -151,7 +151,7 @@
               Da Vinci's Artwork
             </div>
 
-           
+
 
             <div class="card-body">
               <div class="row">
@@ -242,7 +242,7 @@
 <script src="index.js" charset="utf-8"></script>
 
   <script>
-   
+
 
       let monalisa_function = document.getElementById("monalisa_function");
       monalisa_function.addEventListener('mouseenter',()=>{
@@ -279,8 +279,8 @@
       if(window.innerWidth < 994){
         sidebarContent.style.display = "none"
       }
-      
-      
+
+
       // sidebarContent.style.transitionDuration = '0.2s'
       toggleButton.addEventListener('click',function(){
         if(toggleStatus){

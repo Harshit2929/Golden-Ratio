@@ -1,6 +1,7 @@
+//jshint esversion:6
 window.onload = function(){
 	show(0);
-}
+};
 let questions =[
 	{
 		id:1,
@@ -65,7 +66,7 @@ function next(){
 		location.href = "end_quiz.html";
 		return;
 	}
-	
+
 	question_count++;
 	show(question_count);
 }
