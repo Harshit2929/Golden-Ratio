@@ -12,7 +12,7 @@
   <!-- BOOTSTRAP CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link rel="icon" href="images/fla.png">
   <link href="css/loader.css" rel="stylesheet">
   <!-- FONTS-AWESOME -->
@@ -20,7 +20,7 @@
 
 
 </head>
-  
+
   <div id="loader-wrapper">
 		<div id="loader"></div>
 
@@ -262,12 +262,16 @@
 	<h3 id="mbgr">Click on the button below to navigate to the quiz page</h3>
 	<a href="start_quiz.html"><button>QUIZ_TIME!!</button></a>
 	</section>
-  <section id="Applications">
-
-</section>
 
 
 <hr>
+<div class="jumbotron">
+<h1 class="display-4">Want to know more about Golden Ratio</h1>
+<p class="lead">Click the button below</p>
+<form action="/signup" method="post">
+<a href="signup.html"><button class="btn btn-large"type="button" name="button">Subscribe</button></a>
+</form>
+</div>
   <footer id="footer">
 
   </footer>
@@ -277,9 +281,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 
 <!-- EXTERNAL JS -->
-  <script src="index.js" charset="utf-8"></script>
-	<script src="loader.js" charset="utf-8"></script>
-
+	<script>
+    $(document).ready(function(){
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	},3000);
+});
+  </script>
 </body>
 
 </html>
