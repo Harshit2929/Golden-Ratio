@@ -2,7 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body{
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #ffffff;
  }
  p{
      font-size: 1.1em;
@@ -206,6 +206,16 @@ display: block;
 
 
 }
+<<<<<<< HEAD:css/appl.css
+<<<<<<< HEAD
+@media(maz-width:768px){
+    #sidebar{
+      visibility: hidden;
+    }
+
+=======
+=======
+>>>>>>> cd75929ad88c1a78afab471f446d6670807e0ef1:public/css/appl.css
 #toggleButton{
     display: none;
 }
@@ -240,8 +250,13 @@ display: block;
         position: inherit;
         /* display: block; */
     }
+<<<<<<< HEAD:css/appl.css
+    
+>>>>>>> b10d2d3c64f371612860fcdf6002c0d42ade03bd
+=======
    
 
 
 
+>>>>>>> cd75929ad88c1a78afab471f446d6670807e0ef1:public/css/appl.css
 }
