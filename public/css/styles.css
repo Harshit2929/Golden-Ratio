@@ -133,6 +133,28 @@ button:hover {
   box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
   outline:none;
 }
+#footer{
+color: #1a1c20;
+text-align: center;
+}
+a.footer-link{
+  color:#ffffff;
+  padding: 40px 10px 40px 10px;
+  margin: 40px 0 40px 0;
+}
+.btn{
+margin-left: auto;
+
+}
+.jumbotron{
+  text-align: center;
+    color: #28df99;
+    margin: 0 50px 0 50px;
+}
+.bottom-container{
+  padding: 40px 0 0 0;
+  margin-left: auto;
+}
 
 @media (max-width:1000px) {
 
