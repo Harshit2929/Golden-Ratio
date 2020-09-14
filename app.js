@@ -5,16 +5,10 @@ const app=express();
 const https=require("https");
 app.use(bodyParser.urlencoded({extended:true}));
 const request=require("request");
-<<<<<<< HEAD
-
-app.get("/",function(req,res){
-  res.sendFile(__dirname+"/index.html");
-=======
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.get("/",function(rq,res){
   res.sendFile(__dirname+"/signup.html");
->>>>>>> Pushpendrahpx-master
 });
 app.listen(process.env.PORT || 3000,function(){
   console.log("server is running on port 3000");
@@ -63,13 +57,8 @@ request.write(jsonData);
 request.end();
 });
 app.post("/failure",function(req,res){
-<<<<<<< HEAD
-  res.redirect("/signup");
-});
-=======
   res.redirect("/");
 });
 
 //API KEY:8f3b187f273baefe0e33667b46496424-us2
 //List Key:b8ae409f39
->>>>>>> Pushpendrahpx-master
